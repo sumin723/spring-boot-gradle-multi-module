@@ -1,0 +1,13 @@
+plugins {
+    id("java")
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+tasks.register('wrapper', Wrapper) {}
+tasks.register("prepareKotlinBuildScriptModel") {}
